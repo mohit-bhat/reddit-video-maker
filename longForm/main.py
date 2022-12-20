@@ -1,4 +1,4 @@
-from types import NoneType
+#from types import NoneType
 from utils.redditScrape import scrapeComments
 from utils.audioGenerator import soundifyAuthor, soundifyComment
 from utils.captionCreate import commentImage, titleImage
@@ -10,19 +10,21 @@ import shutil
 
 # Gets posts and top 5 comments from selected subreddit
 ### subreddit, number of posts, timeframe
-subreddit = "tifu"
-count = 5
+subreddit = "detrans"
+count = 10
 
+print("Test")
 
 post = scrapeComments(subreddit, count, "week")
 for i in range(count):
     print(post[i][0].author)
 
 
-    if post[i][0].author is None:
-        author = "[deleted]"
-    else:
-        author = str(post[i][0].author)
+    #if post[i][0].author is None:
+    #    author = "[deleted]"
+    #else:
+    #    author = str(post[i][0].author)
+    author = "[Hidden]"
 
     try:
         shutil.rmtree(author)

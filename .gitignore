@@ -131,3 +131,5 @@ dmypy.json
 
 
 exports/
+*.mp3
+*.mov

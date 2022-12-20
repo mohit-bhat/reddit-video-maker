@@ -3,6 +3,7 @@ from moviepy.video import *
 import os
 import random
 import time
+import numpy as np
 
 
 def createVideo(username):
@@ -44,7 +45,7 @@ def createVideo(username):
     bg_file = os.listdir("bg_vids")[random.randrange(0,len(os.listdir("bg_vids")))]
     backgroundClip = VideoFileClip("bg_vids/"+bg_file)
     videoStart = int(backgroundClip.duration-videoAudio.duration)
-    videoStart = random.randrange(0,videoStart)
+    videoStart = random.randrange(0,np.abs(videoStart))
     backgroundClip = backgroundClip.subclip(videoStart, videoStart + videoAudio.duration)
     print(bg_file)
     #(w, h) = videoImages.size

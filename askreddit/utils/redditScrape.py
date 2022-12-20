@@ -1,10 +1,11 @@
 import praw
 
 reddit = praw.Reddit(
-    client_id="",
-    client_secret="",
-    user_agent=""
+    client_id="gsX9I1clR0zJAYQzeI25KQ",
+    client_secret="DQ9QGZrmvHZd3iwjMZOQrq9WHBxTKg",
+    user_agent="windows:reddit_reader:1.0.0 (by u/Rich-Dust3014)"
 )
+
 
 def get_posts(sub, count, span):
     subreddit = reddit.subreddit(sub)
